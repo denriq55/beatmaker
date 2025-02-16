@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatmaker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/sea1tvn.css">
+
+    <script src="http://unpkg.com/tone"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+    <div id="main-container">
+        
+
+        <div class="toprow">
+            <h1>BEATMAKER</h1>
+
+        <button id="pause"><i class="material-icons">pause</i></button>
+        <div class="bpm-container">
+            <div>
+            
+                <input id="bpm" type="number" value="120" min="80" max="160" step="1">
+                <div class="bpmbtns">
+                    <button>+</button>
+                    <button>−</button>
+                </div> 
+            </div>
+
+            <p>BPM</p>
+
+        </div>
+       
+
+        <div id="canvascontainer"></div>
+    </div>
+       
+        <div id="instruments-container">
+            
+                <div class="instrument-name" id="kick">Kick
+                <input type="checkbox" class="step" data-step="0">
+                <input type="checkbox" class="step" data-step="1">
+                <input type="checkbox" class="step" data-step="2">
+                <input type="checkbox" class="step" data-step="3">
+                <input type="checkbox" class="step" data-step="4">
+                <input type="checkbox" class="step" data-step="5">
+                <input type="checkbox" class="step" data-step="6">
+                <input type="checkbox" class="step" data-step="7">
+                <input type="checkbox" class="step" data-step="8">
+                <input type="checkbox" class="step" data-step="9">
+                <input type="checkbox" class="step" data-step="10">
+                <input type="checkbox" class="step" data-step="11">
+                <input type="checkbox" class="step" data-step="12">
+                <input type="checkbox" class="step" data-step="13">
+                <input type="checkbox" class="step" data-step="14">
+                <input type="checkbox" class="step" data-step="15">
+            
+            </div>
+            
+                <div class="instrument-name" id="snare">Snare
+                <input type="checkbox" class="step" data-step="0">
+                <input type="checkbox" class="step" data-step="1">
+                <input type="checkbox" class="step" data-step="2">
+                <input type="checkbox" class="step" data-step="3">
+                <input type="checkbox" class="step" data-step="4">
+                <input type="checkbox" class="step" data-step="5">
+                <input type="checkbox" class="step" data-step="6">
+                <input type="checkbox" class="step" data-step="7">
+                <input type="checkbox" class="step" data-step="8">
+                <input type="checkbox" class="step" data-step="9">
+                <input type="checkbox" class="step" data-step="10">
+                <input type="checkbox" class="step" data-step="11">
+                <input type="checkbox" class="step" data-step="12">
+                <input type="checkbox" class="step" data-step="13">
+                <input type="checkbox" class="step" data-step="14">
+                <input type="checkbox" class="step" data-step="15">
+            </div>
+
+            
+                <div class="instrument-name" id="clap">Claps
+                <input type="checkbox" class="step" data-step="0">
+                <input type="checkbox" class="step" data-step="1">
+                <input type="checkbox" class="step" data-step="2">
+                <input type="checkbox" class="step" data-step="3">
+                <input type="checkbox" class="step" data-step="4">
+                <input type="checkbox" class="step" data-step="5">
+                <input type="checkbox" class="step" data-step="6">
+                <input type="checkbox" class="step" data-step="7">
+                <input type="checkbox" class="step" data-step="8">
+                <input type="checkbox" class="step" data-step="9">
+                <input type="checkbox" class="step" data-step="10">
+                <input type="checkbox" class="step" data-step="11">
+                <input type="checkbox" class="step" data-step="12">
+                <input type="checkbox" class="step" data-step="13">
+                <input type="checkbox" class="step" data-step="14">
+                <input type="checkbox" class="step" data-step="15">
+            </div>
+
+           
+                <div class="instrument-name" id="hats">Hats
+                <input type="checkbox" class="step" data-step="0">
+                <input type="checkbox" class="step" data-step="1">
+                <input type="checkbox" class="step" data-step="2">
+                <input type="checkbox" class="step" data-step="3">
+                <input type="checkbox" class="step" data-step="4">
+                <input type="checkbox" class="step" data-step="5">
+                <input type="checkbox" class="step" data-step="6">
+                <input type="checkbox" class="step" data-step="7">
+                <input type="checkbox" class="step" data-step="8">
+                <input type="checkbox" class="step" data-step="9">
+                <input type="checkbox" class="step" data-step="10">
+                <input type="checkbox" class="step" data-step="11">
+                <input type="checkbox" class="step" data-step="12">
+                <input type="checkbox" class="step" data-step="13">
+                <input type="checkbox" class="step" data-step="14">
+                <input type="checkbox" class="step" data-step="15">
+            </div>
+
+                <div class="instrument-name" id="wobble">Wobble
+                <input type="checkbox" class="step" data-step="0">
+                <input type="checkbox" class="step" data-step="1">
+                <input type="checkbox" class="step" data-step="2">
+                <input type="checkbox" class="step" data-step="3">
+                <input type="checkbox" class="step" data-step="4">
+                <input type="checkbox" class="step" data-step="5">
+                <input type="checkbox" class="step" data-step="6">
+                <input type="checkbox" class="step" data-step="7">
+                <input type="checkbox" class="step" data-step="8">
+                <input type="checkbox" class="step" data-step="9">
+                <input type="checkbox" class="step" data-step="10">
+                <input type="checkbox" class="step" data-step="11">
+                <input type="checkbox" class="step" data-step="12">
+                <input type="checkbox" class="step" data-step="13">
+                <input type="checkbox" class="step" data-step="14">
+                <input type="checkbox" class="step" data-step="15">
+            </div>
+
+         
+        </div>
+
+
+            <div class="effects">
+                <div>
+                <input type="range" id="reverbctrl" min="0" max="1" step="0.1" value="0" >
+                <label>Reverb </label>
+                </div>
+
+                <div>
+                <input type="range" id="distortctrl" min="0" max="1" step="0.1" value="0" >
+                <label>Distortion</label>
+            </div>
+
+            <div>
+                <input type="range" id="pingpongctrl" min="0" max="1" step="0.1" value="0"></label>
+                <label>Pingpong</label>
+            </div>
+
+            <div>
+                <input type="range" id="slider" min="12" max="60" step="1" value="0"></label>
+                <label>Change Wobble Note</label>
+            </div>
+        </div>
+        
+    </div>
+
+  
+    
+</body>
+</html>
